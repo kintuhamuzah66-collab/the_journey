@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <head>
+        <title>git and GitHub</title>
+    </head>
+    <body>
+        <div class="lesson">
+            git is used to keep track of changes.
+
+commands
+1. git clone <url>
+2. git add -> meaning: i would like to add a file to keep track of
+3. git commit -m "message" -> a description of what changes you have made in the recent commit
+4. git status -> what is going on in your repository
+5. git push 
+6. git commit -am "message" 
+        git commit -am "message" is a shortcut that saves your changes in one step.
+        Instead of typing two separate commands, it combines them:
+        git add: It automatically stages all files you have modified or deleted.
+        git commit -m: It saves those changes to your local history with your message.
+
+7. git pull -> helps you download a most recent changes of the repository
+
+
+8. Merge conflicts
+    To solve a merge conflict simply, you just need to open the conflicting files, 
+    choose which code to keep, and save.Think of it as Git getting confused about 
+    two different edits and asking you to make the final decision.
+
+9. git log 
+        git log is like the history log or diary of your project. 
+        It shows you a list of all the commits (saves) that have been made in your repository, 
+        from the newest to the oldest.When you run it, it shows you four main things for each commit:
+
+        The Commit ID: A unique string of letters and numbers (hash).
+        The Author: Who made the changes.
+        The Date: When the changes were saved.
+        The Commit Message: The description of what was changed.
+
+git reset -> has a number of possible ways it can be used
+        1. git reset --soft <commit-id> (The Safest)What it does: Rewinds Git's history, 
+        but keeps all your code changes intact.
+        Result: Your code stays exactly as it is right now, 
+        but your changes are staged and ready to be committed again. 
+        Use this if you just want to rewrite your last commit message or combine commits.
+        
+        2. git reset <commit-id> (The Default)What it does: Rewinds Git's history and unstages your files, 
+        but keeps your code changes on your computer.
+        Result: Your files are safe, but they will look like modified, 
+        unsaved changes.
+
+        git reset --hard <commit-id> (The Dangerous One)What it does: Nukes everything. 
+        It rewinds history and completely deletes any code changes made after that commit.
+        Result: Your project goes back exactly to how it looked at that specific commit. 
+        Any uncommitted work is gone forever.
+
+
+BRANCHING
+    Branching is git's way of working on the same repository at the same time.
+
+    Branching is like creating a parallel universe or a copy of your project where 
+    you can safely test new ideas without breaking the main, 
+    working version of your code.By default, every project starts with one main timeline, usually called main or master.
+
+    Why Use Branching? (The Video Game Analogy)
+        Imagine you are playing a video game and you are about to fight a tough boss:
+        1. You save your game (this is your main branch).
+        2. You create a separate save slot to try a risky strategy (you create a new branch).
+        3. If your strategy fails and everything breaks, you delete that save slot. 
+            Your original game remains perfectly safe.
+        4. If your strategy works, you copy those rewards back into your main save file 
+           (this is called merging).
+
+Commands
+1. git branch -> tells me which branch I am currently in.
+2. git checkout <name of branch> -> switch between available branches
+3. git checkout -b <name of new branch> -> create and switch to new branch
+        </div>
+    </body>
+</html>
